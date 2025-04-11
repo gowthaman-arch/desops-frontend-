@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-CareTaker - Healthcare Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>V-CareTaker</span>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn" class="btn-outline">Login</button>
+                <button id="signup-btn" class="btn-primary">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="wel animate-pop">Welcome to V-CareTaker!</h1>
+                <p class="hero-text animate-fade-in">
+                    V-CareTaker is a web application designed to provide efficient healthcare
+                    management solutions. Our platform helps you connect with caregivers,
+                    manage appointments, and track your health data all in one place.
+                </p>
+                <div class="cta-buttons animate-slide-up">
+                    <button id="hero-login-btn" class="btn-outline">Login</button>
+                    <button id="hero-signup-btn" class="btn-primary">Get Started</button>
+                </div>
+            </div>
+            <div class="hero-image animate-slide-right">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Healthcare professionals">
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Why Choose V-CareTaker?</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Find Caregivers</h3>
+                    <p>Connect with qualified healthcare professionals in your area.</p>
+                </div>
+                <div class="feature-card animate-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Manage Appointments</h3>
+                    <p>Schedule and track your medical appointments with ease.</p>
+                </div>
+                <div class="feature-card animate-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Health Tracking</h3>
+                    <p>Monitor your vital signs and health progress over time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content animate-modal">
+            <span class="close-btn">&times;</span>
+            <div class="form-header">
+                <button class="form-tab active" data-tab="login">Login</button>
+                <button class="form-tab" data-tab="signup">Signup</button>
+            </div>
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <button type="submit" class="btn-primary">Login</button>
+                <p class="form-footer">Not a member? <a href="#" id="switch-to-signup">Signup now</a></p>
+            </form>
+
+            <form id="signup-form" class="auth-form hidden">
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Signup</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 V-CareTaker. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
